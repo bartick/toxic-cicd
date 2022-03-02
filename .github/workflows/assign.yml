@@ -10,9 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.comment.body == '/assign' }}
     steps:
-      - run: echo "${{ github.id }} ${{ github.event.id }}"
       - name: 'Auto-assign issue'
-        uses: pozil/auto-assign-issue@v1.4.0
+        uses: Suvraneel/Issue_Watcher@main
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          assignees: ${{ github.actor }}
+          token: "${{ secrets.GITHUB_TOKEN }}"
+          author: "${{github.actor}}"
+          repo: "${{github.repository.full_name}}"
+          maxIssue: 2
