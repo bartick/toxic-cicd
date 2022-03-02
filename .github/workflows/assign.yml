@@ -11,9 +11,17 @@ jobs:
     if: ${{ github.event.comment.body == '/assign' }}
     steps:
       - name: 'Auto-assign issue'
+        uses: pozil/auto-assign-issue@v1.4.0
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          assignees: ${{ github.actor }}
+      
+      - name: Checkout code
+        uses: actions/checkout@main
+      - name: Run Action
         uses: Suvraneel/Issue_Watcher@main
         with:
           token: "${{ secrets.GITHUB_TOKEN }}"
           author: "${{github.actor}}"
-          repo: "bartick/toxic-cicd"
+          repo: bartick/toxic-cicd #Change the Repo name
           maxIssue: 2
