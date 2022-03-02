@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.comment.body == '/assign' }}
     steps:
-      - run: gh issue view ${{ github.event.number }} --json assignees
       - name: 'Auto-assign issue'
         uses: pozil/auto-assign-issue@v1.4.0
         with:
