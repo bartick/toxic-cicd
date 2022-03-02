@@ -14,22 +14,11 @@ jobs:
         uses: pozil/auto-assign-issue@v1.4.0
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          assignees: ${{ github.actor }}
-      
-      - name: Assign failure
-        if: ${{ failure() }}
-        uses: actions/github-script@v4
-        with:
-          script: |
-            github.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: 'The issue is already assigned!\nPlease find/create a new issue to contribute to.\nYou can safely disregard the failed workflow notification for this issue. ❌',
-            });      
+          assignees: ${{ github.actor }}   
       
       - name: Checkout code
         uses: actions/checkout@main
+        
       - name: Run Action
         uses: Suvraneel/Issue_Watcher@main
         with:
