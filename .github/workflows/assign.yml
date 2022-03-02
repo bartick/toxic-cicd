@@ -23,5 +23,5 @@ jobs:
         with:
           token: "${{ secrets.GITHUB_TOKEN }}"
           author: "${{github.actor}}"
-          repo: bartick/toxic-cicd #Change the Repo name
+          repo: ${{ github.owner }}/${{ github.repo }} #Change the Repo name
           maxIssue: 2
