@@ -15,5 +15,5 @@ jobs:
         with:
           token: "${{ secrets.GITHUB_TOKEN }}"
           author: "${{github.actor}}"
-          repo: "${{github.repository.full_name}}"
+          repo: "bartick/toxic-cicd"
           maxIssue: 2
