@@ -11,8 +11,7 @@ jobs:
     if: ${{ github.event.comment.body == '/assign' }}
     steps:
       - id: print
-        run: $assignee = gh issue view ${{ github.issue.number }} --json assignees
-        run: echo "${{ $assignee }}"
+        run: gh issue view ${{ github.issue.number }} --json assignees
       - name: 'Auto-assign issue'
         uses: pozil/auto-assign-issue@v1.4.0
         with:
