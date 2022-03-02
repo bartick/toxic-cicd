@@ -8,8 +8,10 @@ on:
 jobs:
   auto-assign:
     runs-on: ubuntu-latest
-    if: ${{ github.event.comment.body == '/assign' && github.event.assignee == null }}
+    if: ${{ github.event.comment.body == '/assign' }}
     steps:
+      - id: print
+        run: echo "Assigning issue to ${{ github.event.total_assignees }}"
       - name: 'Auto-assign issue'
         uses: pozil/auto-assign-issue@v1.4.0
         with:
