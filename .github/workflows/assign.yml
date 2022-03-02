@@ -18,11 +18,10 @@ jobs:
       
       - name: Checkout code
         uses: actions/checkout@main
-      - run: echo "${{ github.repository }}"
       - name: Run Action
         uses: Suvraneel/Issue_Watcher@main
         with:
           token: "${{ secrets.GITHUB_TOKEN }}"
-          author: "${{github.actor}}"
-          repo: bartick/toxic-cicd #Change the Repo name
+          author: "${{ github.actor }}"
+          repo: ${{ github.repository }}
           maxIssue: 2
