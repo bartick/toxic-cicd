@@ -2,7 +2,8 @@ name: Assign
 
 on:
   issue_comment:
-    [created]
+    types:
+      - created
 
 jobs:
   auto-assign:
