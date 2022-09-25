@@ -6,11 +6,25 @@ jobs:
   greeting:
     runs-on: ubuntu-latest
     permissions:
-      issues: write
-      pull-requests: write
+      issues: read
+      pull-requests: read
     steps:
     - uses: actions/first-interaction@v1
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: 'Thank you for opening your first issue in our repository, one of our maintainers will get in touch with you soon.\n\nWe at Metafy have some special rewards and swags for the top contributors in general repos and every contributor in web3 repos\nFor being eligible for that, please authenticate yourself using this link:\nhttps://hacktoberfest.auth.metafy.social\n\nBest of luck on your Contributions\nFor further queries you can join our discord for support : https://discord.gg/W6PmEjjQsA'
-        pr-message: 'Thank you for opening your first pull request in our repository, one of our maintainers will get in touch with you soon.\n\nWe at Metafy have some special rewards and swags for the top contributors in general repos and every contributor in web3 repos\nFor being eligible for that, please authenticate yourself using this link:\nhttps://hacktoberfest.auth.metafy.social\n\nBest of luck on your Contributions\nFor further queries you can join our discord for support : https://discord.gg/W6PmEjjQsA'
+        issue-message: 'Thank you for opening your first issue in our repository, one of our maintainers will get in touch with you soon.
+
+        We at Metafy have some special rewards and swags for the top contributors in general repos and every contributor in web3 repos
+        For being eligible for that, please authenticate yourself using this link:
+        https://hacktoberfest.auth.metafy.social 
+        
+        Best of luck on your Contributions
+        For further queries you can join our discord for support : https://discord.gg/W6PmEjjQsA'
+        pr-message: 'Thank you for opening your first pull request in our repository, one of our maintainers will get in touch with you soon.
+
+        We at Metafy have some special rewards and swags for the top contributors in general repos and every contributor in web3 repos
+        For being eligible for that, please authenticate yourself using this link:
+        https://hacktoberfest.auth.metafy.social 
+        
+        Best of luck on your Contributions
+        For further queries you can join our discord for support : https://discord.gg/W6PmEjjQsA'
