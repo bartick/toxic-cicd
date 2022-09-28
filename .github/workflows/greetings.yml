@@ -9,7 +9,7 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-    - uses: bartick/interaction
+    - uses: bartick/interaction@master
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         issue-message: 'Thank you for opening your first issue in our repository, one of our maintainers will get in touch with you soon.
