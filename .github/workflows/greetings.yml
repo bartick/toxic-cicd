@@ -9,28 +9,14 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-    - uses: bartick/interactions@master
+    - uses: bartick/custom-interactions@master
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         issue-message: |
           Thank you for opening your first issue in our repository, one of our maintainers will get in touch with you soon.
-          
-          We at Metafy have some special rewards and swags for the top contributors in general repos and every contributor in web3 repos
-          For being eligible for that, please authenticate yourself using this link:
-          https://hacktoberfest.auth.metafy.social 
-          
-          Rewards : T-shirts & NFT ( for blockchain contributions )
-          Best of luck on your Contributions
-          For further queries you can join our discord for support : https://discord.gg/W6PmEjjQsA
         pr-message: |
           Thank you for opening your first pull request in our repository, one of our maintainers will get in touch with you soon.
-          We at Metafy have some special rewards and swags for the top contributors in general repos and every contributor in web3 repos
-          For being eligible for that, please authenticate yourself using this link:
-          https://hacktoberfest.auth.metafy.social 
-          Rewards : T-shirts & NFT ( for blockchain contributions )
-          
-          Best of luck on your Contributions
-          For further queries you can join our discord for support : https://discord.gg/W6PmEjjQsA
-        once: false
+        pr-once: false
+        issue-once: false
         pr-number: 10
         issue-number: 10
