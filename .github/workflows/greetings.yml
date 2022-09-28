@@ -32,4 +32,5 @@ jobs:
           Best of luck on your Contributions
           For further queries you can join our discord for support : https://discord.gg/W6PmEjjQsA
         once: false
-        interaction-number: 10
+        pr-number: 10
+        issue-number: 10
