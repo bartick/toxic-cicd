@@ -9,7 +9,7 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-    - uses: bartick/custom-interactions@master
+    - uses: bartick/custom-interactions@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         issue-message: |
